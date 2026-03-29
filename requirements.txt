@@ -1,7 +1,6 @@
 pytest==8.1.1
 requests==2.31.0
 pytest-html==4.1.1
-pytest-allure-adaptor==1.7.10
 allure-pytest==2.13.2
 python-dotenv==1.0.1
 pyyaml==6.0.1
