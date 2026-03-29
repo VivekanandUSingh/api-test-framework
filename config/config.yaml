@@ -1,0 +1,21 @@
+base_url: "https://reqres.in/api"
+
+endpoints:
+  users: "/users"
+  login: "/login"
+  register: "/register"
+
+test_data:
+  valid_user:
+    email: "eve.holt@reqres.in"
+    password: "pistol"
+  invalid_user:
+    email: "invalid@test.com"
+    password: "wrongpassword"
+  new_user:
+    name: "Vivekanand"
+    job: "QA Architect"
+
+timeouts:
+  connect: 5
+  read: 10
