@@ -57,31 +57,48 @@ api-test-framework/
 
 ## Setup & Run
 
+> Recommended Python version: 3.11 (project targets Pytest 8.1 and plugin ecosystem versions that require `distutils` compatibility on older/newer Python runtime)
+
 **1. Clone the repo**
 ```bash
 git clone https://github.com/VivekanandUsingh/api-test-framework.git
 cd api-test-framework
 ```
 
-**2. Install dependencies**
+**2. Create and activate virtual environment**
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
+# PowerShell
+.\.venv\Scripts\Activate.ps1
+# CMD
+.\.venv\Scripts\activate.bat
+# Git Bash / WSL
+source .venv/bin/activate
 ```
 
-**3. Run all tests**
+**3. Install dependencies**
 ```bash
-pytest
+python -m pip install -U pip setuptools wheel
+python -m pip install -r requirements.txt
 ```
 
-**4. Run with HTML report**
+**4. Ensure .gitignore is present**
+Add `.venv/`, `__pycache__/`, `reports/`, and IDE directories (`.vscode/`, `.idea/`) to `.gitignore` (the repository now includes this file).
+
+**5. Run all tests**
 ```bash
-pytest --html=reports/report.html --self-contained-html
+python -m pytest -q
 ```
 
-**5. Run a specific suite**
+**6. Run with HTML report**
 ```bash
-pytest tests/test_users.py -v
-pytest tests/test_auth.py -v
+python -m pytest --html=reports/report.html --self-contained-html
+```
+
+**7. Run a specific suite**
+```bash
+python -m pytest tests/test_users.py -v
+python -m pytest tests/test_auth.py -v
 ```
 
 ---

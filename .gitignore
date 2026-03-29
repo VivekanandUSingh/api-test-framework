@@ -1,0 +1,30 @@
+# Python virtual environment
+.venv/
+env/
+venv/
+
+# bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# test outputs
+reports/
+*.html
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# optional local config
+*.env
+
+# pytest cache
+.pytest_cache/
+
+# log files
+*.log
